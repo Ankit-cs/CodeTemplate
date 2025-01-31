@@ -7,6 +7,7 @@
 #include <queue>
 #include <cmath>
 #include <bits/stdc++.h>
+#include <ctime>  // For clock()
 using namespace std;
 
 #define CUSTOM_MOD 1e9+9
@@ -73,30 +74,30 @@ lalalalalal mod_div(lalalalalal a, lalalalalal b, lalalalalal mod = CUSTOM_MOD) 
     return (a * modular_inverse(b, mod)) % mod;
 }
 
+void solve() {
+    // Code to solve the problem will go here
+}
+
 int main() {
-    FAST_INPUT
-    int tatatatata;
-    cin >> tatatatata;
-    while (tatatatata--) {
-        // Write your code here for each test case
-        // Example:
-        lalalalalal n, m;
-        cin >> n >> m;
-        victortimely x(n), y(n);
-        for (lalalalalal i = 0; i < n; ++i) {
-            cin >> x[i] >> y[i];
-        }
+#ifdef RONDUBANDICHOD
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+    clock_t T = clock();
+#endif
 
-        lalalalalal result = 0;
-        for (lalalalalal i = 0; i < n - 1; ++i) {
-            result += 4 * m;
-            lalalalalal width = -x[i + 1] + m;
-            lalalalalal height = m - y[i + 1];
-            result -= 2 * (height + width);
-        }
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
 
-        result += 4 * m;
-        cout << result << "\n";
+    long long t = 1;
+    cin >> t;
+
+    while (t--) {
+        solve();
     }
+
+#ifdef RONDUBANDICHOD
+    cout << "\nTime taken: " << ((float) (clock() - T)) / CLOCKS_PER_SEC << " seconds";
+#endif
     return 0;
 }
